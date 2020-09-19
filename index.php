@@ -3,17 +3,16 @@
 	$errors = "";
 
 	// connect to database
-	$db = mysqli_connect("db4free.net", "my_local", "12345678", "mydb_11");
+	$db = mysqli_connect("localhost", "root", "", "mydb");
 
 	// insert a quote if submit button is clicked
-	if (isset($_GET['add'])) {
+	if (isset($_POST['add'])) {
 
 		if (empty($_POST['part']) or empty($_POST['amt'])) {
 			$errors = "You must fill in the vlaues";
 		}else{
 			$name = $_POST['part'];
 			$amt=$_POST['amt'];
-			echo $name.$amt;
 			$query = "INSERT INTO users (name,amt) VALUES ('$name',$amt)";
 			mysqli_query($db, $query);
 			header('location: index.php');
@@ -31,8 +30,7 @@
 	
 
 	// select all tasks if page is visited or refreshed
-	
-$tasks = mysqli_query($db, "SELECT * FROM users");
+	$tasks = mysqli_query($db, "SELECT * FROM users");
 
 ?>
 <!DOCTYPE html>
@@ -56,7 +54,7 @@ $tasks = mysqli_query($db, "SELECT * FROM users");
 		<?php } ?>
 		<input type="text" name="part" class="split_input" placeholder="Participant name">
 		<input type="number" name="amt" class="split_input" placeholder="Amount">
-		<a href="index.php?add" name="add" id="add_btn" class="add_btn">Add</a>
+		<button type="submit" name="add" id="add_btn" class="add_btn">Add</button>
 	
 
 
