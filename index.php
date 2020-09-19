@@ -6,7 +6,7 @@
 	$db = mysqli_connect("db4free.net", "my_local", "12345678", "mydb_11");
 
 	// insert a quote if submit button is clicked
-	if (isset($_POST['add'])) {
+	if (isset($_GET['add'])) {
 
 		if (empty($_POST['part']) or empty($_POST['amt'])) {
 			$errors = "You must fill in the vlaues";
