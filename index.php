@@ -13,6 +13,7 @@
 		}else{
 			$name = $_POST['part'];
 			$amt=$_POST['amt'];
+			echo $name.$amt;
 			$query = "INSERT INTO users (name,amt) VALUES ('$name',$amt)";
 			mysqli_query($db, $query);
 			header('location: index.php');
