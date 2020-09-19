@@ -56,7 +56,7 @@ $tasks = mysqli_query($db, "SELECT * FROM users");
 		<?php } ?>
 		<input type="text" name="part" class="split_input" placeholder="Participant name">
 		<input type="number" name="amt" class="split_input" placeholder="Amount">
-		<a href="index.php?add" name="add" id="add_btn" class="add_btn">Add</button>
+		<a href="index.php?add" name="add" id="add_btn" class="add_btn">Add</a>
 	
 
 
