@@ -3,7 +3,7 @@
 	$errors = "";
 
 	// connect to database
-	$db = mysqli_connect("db4free.net", "my_local", "12345678", "mydb_11");
+	$db = mysqli_connect("remotemysql.com", "wa3qSVOdmO", "W35syBhAvq", "wa3qSVOdmO");
 
 	// insert a quote if submit button is clicked
 	if (isset($_GET['add'])) {
