@@ -3,7 +3,7 @@
 	$errors = "";
 
 	// connect to database
-	$db = mysqli_connect("localhost", "root", "", "mydb");
+	$db = mysqli_connect("localhost", "my_local", "12345678", "mydb");
 	// select all tasks if page is visited or refreshed
 	$tasks = mysqli_query($db, "SELECT * FROM users");
 	if(isset($_GET['del'])){
